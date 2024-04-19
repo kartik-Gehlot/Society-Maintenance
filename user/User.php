@@ -39,7 +39,7 @@ $data = mysqli_query($conn, $qry) or die ("not fire");
         </div> -->
         <div class="container my-5">
             <div class="row">
-                <div class="col-sm-2  text-center mt-4 ">
+                <!-- <div class="col-sm-2  text-center mt-4 ">
                     <div class="row fs-4">
 
                         <div class="col-sm-12 mt-5 mb-5">
@@ -65,13 +65,13 @@ $data = mysqli_query($conn, $qry) or die ("not fire");
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-sm-10">
                     <div class="row">
                         <?php while ($item = $data->fetch_assoc()) { ?>
                             <div class="col-sm-4">
                                 <div class="card text-center my-3">
-                                    <img class="card-img-top" src="./Admin/<?php echo $item['Image'] ?>" alt="Card image">
+                                    <img class="card-img-top" src="./admin/<?php echo $item['Image'] ?>" alt="Card image">
                                     <div class="card-body">
                                         <h4 class="card-title">
                                             <?php echo $item['Title'] ?>
