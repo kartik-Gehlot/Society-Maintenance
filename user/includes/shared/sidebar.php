@@ -71,11 +71,17 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages6" aria-expanded="true"
             aria-controls="collapseUtilities">
             <i class="fas fa-search" aria-hidden="true"></i>
-            <span>Car Book</span>
+            <span>Pre Book</span>
         </a>
         <div id="collapsePages6" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
+            <a class="collapse-item" href="User.php">Inventory</a>
+
                 <a class="collapse-item" href="CarBook.php">Book Taxi</a>
+           
+                <a class="collapse-item" href="UserBorrow.php">Borrowed Items</a>
+            
+                <a class="collapse-item" href="Balance.php">Balance</a>
             </div>
         </div>
     </li>
