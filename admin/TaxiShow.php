@@ -2,7 +2,7 @@
 include 'includes/shared/header.php';
 include 'includes/shared/sidebar.php';
 include 'includes/shared/topbar.php';
-<<<<<<< HEAD
+<<< HEAD
 $conn = mysqli_connect("localhost", "root", "", "sms") or die ("not connect");
 $qry = "select * from taxi";
 $data = mysqli_query($conn, $qry) or die ("not fire");
