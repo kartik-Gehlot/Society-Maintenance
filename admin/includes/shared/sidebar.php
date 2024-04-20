@@ -126,11 +126,15 @@
         <div class="bg-white py-2 collapse-inner rounded">
         <a class="collapse-item" href="Show.php">Inventory</a>
 
-            <a class="collapse-item" href="CarBook.php">Book Taxi</a>
        
             <a class="collapse-item" href="Adminbro.php">Borrowed Items</a>
         
             <a class="collapse-item" href="Requests.php">Borrow Requests</a>
+
+            <a class="collapse-item" href="Taxi.php">Add Taxi</a>
+
+            <a class="collapse-item" href="TaxiShow.php">Manage Taxi</a>
+
         </div>
     </div>
 </li>
