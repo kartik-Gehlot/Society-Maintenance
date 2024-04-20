@@ -40,8 +40,9 @@ include 'includes/shared/topbar.php';
                     <form action="action.php" method="post">
 
                         <div class="mb-3 mt-4 ms-3 me-3">
-                            <input type="number" class="form-control" placeholder="Enter id" name="id"
-                                value="<?php echo $flatid ?>" required>
+                        
+                            <input type="text" class="form-control" placeholder="Enter id" name="id"
+                                value= " <?php echo $_SESSION['blockno'] . '-' . $_SESSION['flatno'] ?> " required>
                         </div>
                         <div class="mb-3 mt-4 ms-3 me-3">
                             <input type="hidden" class="form-control" placeholder="Enter username" name="username" value="<?php
