@@ -124,11 +124,11 @@
     </a>
     <div id="collapsePages6" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item" href="User.php">Inventory</a>
+        <a class="collapse-item" href="Show.php">Inventory</a>
 
             <a class="collapse-item" href="CarBook.php">Book Taxi</a>
        
-            <a class="collapse-item" href="Admin.php">Borrowed Items</a>
+            <a class="collapse-item" href="Adminbro.php">Borrowed Items</a>
         
             <a class="collapse-item" href="Balance.php">Borrow Requests</a>
         </div>

@@ -1,17 +1,21 @@
 <?php
-session_start();
 
-if (isset($_SESSION['Admin']) and $_SESSION['status'] == true) {
+include 'includes/shared/header.php';
+include 'includes/shared/sidebar.php';
+include 'includes/shared/topbar.php';
+// session_start();
+
+// if (isset($_SESSION['Admin']) and $_SESSION['status'] == true) {
     ?>
     <!DOCTYPE html>
     <html lang="en">
 
     <head>
-        <?php include("../Link.php") ?>
+        <?php //include("../Link.php") ?>
     </head>
 
     <body>
-        <?php include("../Navbar.php") ?>
+        <?php //include("../Navbar.php") ?>
 
         <div class="container my-5">
         <div class="row">
@@ -80,17 +84,19 @@ if (isset($_SESSION['Admin']) and $_SESSION['status'] == true) {
             </div>
         </div>
     </div>
-        <?php include("../Footer.php") ?>
+        <?php //include("../Footer.php") ?>
 
     </body>
 
     </html>
 
     <?php
-}
-else{
-    header("location:Login.php");
-    // echo "error";
-}
+// }
+// else{
+//     header("location:Login.php");
+//     // echo "error";
+// }
+include './includes/shared/footer.php';
+include './includes/shared/scripts.php';
 
 ?>
