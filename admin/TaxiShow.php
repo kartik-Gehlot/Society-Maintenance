@@ -6,7 +6,7 @@ include 'includes/shared/topbar.php';
 $conn = mysqli_connect("localhost", "root", "", "sms") or die ("not connect");
 $qry = "select * from taxi";
 $data = mysqli_query($conn, $qry) or die ("not fire");
-if (isset ($_SESSION['Admin']) and $_SESSION['status'] == true) {
+// if (isset ($_SESSION['Admin']) and $_SESSION['status'] == true) {
     ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -98,7 +98,7 @@ if (isset ($_SESSION['Admin']) and $_SESSION['status'] == true) {
 // } else {
 //     header("location:Login.php");
     // echo "error";
-}
+// }
 include './includes/shared/footer.php';
 include './includes/shared/scripts.php';
 ?>

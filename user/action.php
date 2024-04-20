@@ -159,17 +159,7 @@ if (isset($_POST['taxiBook'])) //reg data
 
 }
 
-if (isset($_POST['bal'])) //update balance
-{
-    $balance = $_POST["balance"];
-    $username = $_POST["username"];
 
-
-    $qry = "update wallet set balance=balance+$balance where username='$username'";
-    mysqli_query($conn, $qry) or die("not fire");
-
-    header("location:User.php");
-}
 
 
 ?>
