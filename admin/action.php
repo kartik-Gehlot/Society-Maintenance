@@ -48,17 +48,17 @@ if (isset ($_GET['id'])) {
 
 
 
-    $qrys = "update inventory set Quantity=Quantity-$row[4] where Title='$row[3]'";
-    mysqli_query($conn, $qrys) or die ("not fire");
+  //  $qrys = "update inventory set Quantity = Quantity-$row[4] where Title ='$row[3]'";
+  //  mysqli_query($conn, $qrys) or die ("not fire");
 
-    $qry2 = "insert into borrow set uid='$row[1]',username='$row[2]',Title='$row[3]',Quantity='$row[4]',Duration='$row[5]',Price='$row[6]'";
+    $qry2 = "insert into borrow set uid='$row[1]',FlatNumber='$row[2]',username='$row[3]',Title='$row[4]',Quantity='$row[5]',Duration='$row[6]',Price='$row[7]'";
     mysqli_query($conn, $qry2) or die ("not fire");
 
     $qry3 = "delete from request where id='$id'";
     mysqli_query($conn, $qry3) or die ("not fire");
 
-    $qry4 = "update wallet set balance=balance-$row[4]*$row[6] where username='$row[2]'";
-    mysqli_query($conn, $qry4) or die ("not fire");
+    //$qry4 = "update wallet set balance=balance-$row[4]*$row[6] where username='$row[2]'";
+    //mysqli_query($conn, $qry4) or die ("not fire");
     header("location:Requests.php");
 
 

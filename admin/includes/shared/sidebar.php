@@ -126,7 +126,7 @@
         <div class="bg-white py-2 collapse-inner rounded">
         <a class="collapse-item" href="Show.php">Inventory</a>
 
-            <a class="collapse-item" href="CarBook.php">Book Taxi</a>
+            <a class="collapse-item" href="TaxiShow.php">View Taxi</a>
        
             <a class="collapse-item" href="Adminbro.php">Borrowed Items</a>
         
