@@ -126,11 +126,19 @@
         <div class="bg-white py-2 collapse-inner rounded">
         <a class="collapse-item" href="Show.php">Inventory</a>
 
+<<<<<<< HEAD
             <a class="collapse-item" href="TaxiShow.php">View Taxi</a>
+=======
+>>>>>>> 9e53f521b7e32c1a0aa28d5020b8bb9375fcd627
        
             <a class="collapse-item" href="Adminbro.php">Borrowed Items</a>
         
             <a class="collapse-item" href="Requests.php">Borrow Requests</a>
+
+            <a class="collapse-item" href="Taxi.php">Add Taxi</a>
+
+            <a class="collapse-item" href="TaxiShow.php">Manage Taxi</a>
+
         </div>
     </div>
 </li>

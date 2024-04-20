@@ -154,7 +154,7 @@ if(isset($_POST['logina'])) {
     $db = mysqli_connect('localhost', 'root', '', 'sms') or
     die('Error connecting to MySQL server.');
 
-    $query = "SELECT * FROM admin WHERE username = '{$username}' AND password = '{$password}' ";
+    $query = "SELECT * FROM admin WHERE username= '{$username}'  and password = '{$password}' ";
 //echo $query;
     $result = mysqli_query($db, $query);
 
