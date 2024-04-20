@@ -6,17 +6,14 @@ include 'includes/shared/topbar.php';
 $conn = mysqli_connect("localhost", "root", "", "sms") or die("not connect");
 $qry = "select * from inventory";
 $data = mysqli_query($conn, $qry) or die("not fire");
-if (isset($_SESSION['Admin']) and $_SESSION['status'] == true) {
+//if (isset($_SESSION['Admin']) and $_SESSION['status'] == true) {
     ?>
     <!DOCTYPE html>
     <html lang="en">
 
-    <head>
-        <?php// include("../Link.php") ?>
-    </head>
+    
 
     <body>
-        <?php //include("../Navbar.php") ?>
 
         <div class="container my-5">
             <div class="row">
@@ -69,7 +66,7 @@ if (isset($_SESSION['Admin']) and $_SESSION['status'] == true) {
                                 <tr>
                                     <td><?php echo $item['id'] ?></td>
                                     <td><?php echo $item['Title'] ?></td>
-                                    <td><img src="<?php echo $item['Image'] ?>" alt="" width="50px"></td>
+                                    <td><img src="../Images/<?php echo $item['Image'] ?>" alt="" width="50px"></td>
                                     <td><?php echo $item['Quantity'] ?></td>
                                     <td><?php echo $item['Price'] ?></td>
                                     <td><button class="btn btn-warning">Update</button></td>
@@ -82,7 +79,6 @@ if (isset($_SESSION['Admin']) and $_SESSION['status'] == true) {
                 </div>
             </div>
         </div>
-        <?php //include("../Footer.php") ?>
 
     </body>
 
@@ -92,7 +88,7 @@ if (isset($_SESSION['Admin']) and $_SESSION['status'] == true) {
 // } else {
 //     header("location:Login.php");
     // echo "error";
-}
+//}
 include './includes/shared/footer.php';
 include './includes/shared/scripts.php';
 

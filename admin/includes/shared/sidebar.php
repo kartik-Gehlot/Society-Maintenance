@@ -130,7 +130,7 @@
        
             <a class="collapse-item" href="Adminbro.php">Borrowed Items</a>
         
-            <a class="collapse-item" href="Balance.php">Borrow Requests</a>
+            <a class="collapse-item" href="Requests.php">Borrow Requests</a>
         </div>
     </div>
 </li>

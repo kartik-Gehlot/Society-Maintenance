@@ -76,8 +76,8 @@ if (isset($_POST['req'])) //reg data
 
     $qry = "insert into request set uid='$id',username='$username',Title='$title',Quantity='$Quantity',Duration='$date',Price='$price'";
     mysqli_query($conn, $qry) or die("not fire");
-    // $rmqry = "UPDATE inventory SET Quantity = Quantity-$Quantity WHERE Title = $title";
-    // mysqli_query($conn,$rmqry) or die("not fire");
+    $rmqry = "UPDATE inventory SET Quantity = Quantity-$Quantity WHERE Title = '$title'";
+    mysqli_query($conn,$rmqry) or die("not fire");
     header("location:User.php");
 }
 
