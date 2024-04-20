@@ -41,7 +41,7 @@ $data = mysqli_query($conn, $qry) or die("not fire");
 
         <div class="container my-5">
             <div class="row">
-                <div class="col-sm-2  text-center mt-4">
+                <!-- <div class="col-sm-2  text-center mt-4">
                     <div class="row fs-4">
 
                         <div class="col-sm-12 mt-5 mb-5">
@@ -66,7 +66,7 @@ $data = mysqli_query($conn, $qry) or die("not fire");
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-sm-10">
                     <div class="row">
                         <div class="col-sm-12">
