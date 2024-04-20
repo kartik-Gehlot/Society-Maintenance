@@ -4,7 +4,7 @@ include 'includes/shared/header.php';
 include 'includes/shared/sidebar.php';
 include 'includes/shared/topbar.php';
 // session_start();
-$conn = mysqli_connect("localhost", "root", "", "societymanagement") or die("not connect");
+$conn = mysqli_connect("localhost", "root", "", "sms") or die("not connect");
 $qry = "select * from taxi_booking";
 $data = mysqli_query($conn, $qry) or die("not fire");
 // if (isset($_SESSION['Admin']) and $_SESSION['status'] == true) {
