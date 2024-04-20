@@ -9,7 +9,7 @@ include 'includes/shared/topbar.php';
 <?php
 // session_start();
 $conn = mysqli_connect("localhost", "root", "", "sms") or die("not connect");
-$complaint_sql = mysqli_query($con, "SELECT * from complaints where FlatNumber='{$_SESSION['flatno']}' and BlockNumber='{$_SESSION['blockno']}'");
+$complaint_sql = mysqli_query($con, "SELECT * from allotments where FlatNumber='{$_SESSION['flatno']}' and BlockNumber='{$_SESSION['blockno']}'");
 $complaint = mysqli_num_rows($complaint_sql);
 
 // $visit_sql = mysqli_query($con, "SELECT * from visitors where FlatID='$flatid' and BlockNumber='{$_SESSION['blockno']}'");

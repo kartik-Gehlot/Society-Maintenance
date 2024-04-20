@@ -10,7 +10,7 @@ $visit_sql = mysqli_query($con, "SELECT * from visitors where FlatID='$flatid' a
 $visit = mysqli_num_rows($visit_sql);
 
 $conn = mysqli_connect("localhost", "root", "", "sms") or die("not connect");
-mysqli_query($conn, "DELETE FROM taxi_booking WHERE Booking_Time < (NOW() - INTERVAL 1 HOUR )");
+//mysqli_query($conn, "DELETE FROM taxi_booking WHERE Booking_Time < (NOW() - INTERVAL 1 HOUR )");
 
 if (isset($_POST['reg'])) //reg data
 {
@@ -76,6 +76,8 @@ if (isset($_POST['req'])) //reg data
 
     $qry = "insert into request set uid='$id',username='$username',Title='$title',Quantity='$Quantity',Duration='$date',Price='$price'";
     mysqli_query($conn, $qry) or die("not fire");
+    // $rmqry = "UPDATE inventory SET Quantity = Quantity-$Quantity WHERE Title = $title";
+    // mysqli_query($conn,$rmqry) or die("not fire");
     header("location:User.php");
 }
 

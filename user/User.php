@@ -17,13 +17,7 @@ $data = mysqli_query($conn, $qry) or die ("not fire");
     <!DOCTYPE html>
     <html lang="en">
 
-    <head>
-        <?php //include ("Link.php") ?>
-    </head>
-
     <body>
-        <?php //include ("Navbar.php") ?>
-
         <!-- <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-4"></div>
@@ -94,7 +88,6 @@ $data = mysqli_query($conn, $qry) or die ("not fire");
                 </div>
             </div>
         </div>
-        <?php include ("Footer.php") ?>
 
     </body>
 
