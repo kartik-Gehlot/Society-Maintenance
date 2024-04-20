@@ -71,7 +71,7 @@ $data = mysqli_query($conn, $qry) or die ("not fire");
                         <?php while ($item = $data->fetch_assoc()) { ?>
                             <div class="col-sm-4">
                                 <div class="card text-center my-3">
-                                    <img class="card-img-top" src="./admin/<?php echo $item['Image'] ?>" alt="Card image">
+                                    <img class="card-img-top" src="../Images/<?php echo $item['Image'] ?>" alt="Card image">
                                     <div class="card-body">
                                         <h4 class="card-title">
                                             <?php echo $item['Title'] ?>
