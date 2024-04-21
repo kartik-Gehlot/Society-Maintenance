@@ -33,7 +33,6 @@
                <div class="form-btn">
                 <hr id="indicator">
                    <span onclick="login()">Login</span>
-                   <span onclick="register()">Register</span>
                    
                 </div>
                 <form action="userlogin.php" method="POST" id="Loginform">
@@ -124,14 +123,9 @@
      //  var Regform=document.getElementById("Regform")
        var indicator=document.getElementById("indicator")
 
-         function register(){
-            Regform.style.transform= "translateX(0px)";
-            Loginform.style.transform= "translateX(0px)";
-            indicator.style.transform= "translateX(80px)";
-
-         }
+        
          function login(){
-            Regform.style.transform= "translateX(300px)";
+          //  Regform.style.transform= "translateX(300px)";
             Loginform.style.transform= "translateX(300px)";
             indicator.style.transform= "translateX(0px)";
 
