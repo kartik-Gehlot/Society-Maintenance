@@ -47,7 +47,7 @@ include 'includes/shared/topbar.php';
                         <div class="mb-3 mt-4 ms-3 me-3">
                         
                             <input type="text" class="form-control" placeholder="Enter FLatNumber" name="flatno"
-                                value= " <?php echo $_SESSION['flatno'] ?> " required>
+                                value= " <?php echo $_SESSION['flatno'] ?> " hidden required>
                         </div>
                         <div class="mb-3 mt-4 ms-3 me-3">
                             <input type="hidden" class="form-control" placeholder="Enter username" name="username" value="<?php

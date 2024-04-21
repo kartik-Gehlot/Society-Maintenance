@@ -10,7 +10,7 @@ $visit_sql = mysqli_query($con, "SELECT * from visitors where FlatID='$flatid' a
 $visit = mysqli_num_rows($visit_sql);
 
 $conn = mysqli_connect("localhost", "root", "", "sms") or die("not connect");
-//mysqli_query($conn, "DELETE FROM taxi_booking WHERE Booking_Time < (NOW() - INTERVAL 1 HOUR )");
+mysqli_query($conn, "DELETE FROM taxi_booking WHERE Booking_Time < (NOW() - INTERVAL 1 HOUR )");
 
 if (isset($_POST['reg'])) //reg data
 {
@@ -30,7 +30,7 @@ if (isset($_POST['reg'])) //reg data
 
     // $qry2 = "insert into wallet set uid='$row[0]',username='$row[1]',balance=0";
     // mysqli_query($conn, $qry2) or die("not fire");
-    // header("location:Login.php");
+    header("location:Login.php");
 }
 
 if (isset($_POST['log'])) //login
@@ -142,17 +142,17 @@ if (isset($_POST['taxiBook'])) //reg data
         mysqli_query($conn, $qryy) or die("not fire");
         $qryy1 = "update taxi_booking set rent=rent-$rent1 where username='$timeDatas[0]'";
         mysqli_query($conn, $qryy1) or die("not fire");
-        $qry41 = "update wallet set balance=balance-$rent1 where username='$username'";
-        mysqli_query($conn, $qry41) or die("not fire");
-        $qry42 = "update wallet set balance=balance+$rent1 where username='$timeDatas[0]'";
-        mysqli_query($conn, $qry42) or die("not fire");
+        //$qry41 = "update wallet set balance=balance-$rent1 where username='$username'";
+       // mysqli_query($conn, $qry41) or die("not fire");
+       // $qry42 = "update wallet set balance=balance+$rent1 where username='$timeDatas[0]'";
+       // mysqli_query($conn, $qry42) or die("not fire");
         header("location:CarBook.php");
 
     } else {
         $qry = "insert into taxi_booking set uid='$uid',username='$username',contact='$contact',destination='$destination',taxiName='$taxiname',rent='$rent',Booking_Time='$time'";
         mysqli_query($conn, $qry) or die("not fire");
-        $qry4 = "update wallet set balance=balance-$rent where username='$username'";
-        mysqli_query($conn, $qry4) or die("not fire");
+        //$qry4 = "update wallet set balance=balance-$rent where username='$username'";
+       // mysqli_query($conn, $qry4) or die("not fire");
         header("location:CarBook.php");
     }
 
