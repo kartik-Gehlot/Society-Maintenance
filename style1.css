@@ -168,7 +168,7 @@ form input{
     border: 1px solid #ccc;
 }
 #Loginform{
-    left:-300px;
+    /* left:-300px; */
     top: 110px;
     
 }
@@ -187,8 +187,8 @@ form a{
     background: rgb(5, 222, 222);
     height: 3px;
     margin-top: 8px;
-    transform: translateX(80px);
-    transition: transform 1ss;
+    /* transform: translateX(80px); */
+    /* transition: transform 1ss; */
 }
 .btn-losi{
      width: 75%;
