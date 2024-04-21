@@ -19,29 +19,11 @@ $data = mysqli_query($conn, $qry) or die ("not fire");
     <!DOCTYPE html>
     <html lang="en">
 
-    <head>
-        <?php //include ("Link.php") ?>
-    </head>
+    
 
     <body>
-        <?php //include ("Navbar.php") ?>
 
-        <!-- <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-4"></div>
-                <div class="col-sm-4">
-                    <h1 class="text-center">Welcome :-
-                        <?php // echo $_SESSION['username'] ?>
-                    </h1>
-                </div>
-                <div class="col-sm-4">
-                    <a href="Balance.php"><button class="btn btn-warning mt-2 fw-bold btn-lg">Balance :- <span
-                                class="badge bg-danger">
-                                <?php //echo $bal[0] ?> ₹
-                            </span></button></a>
-                </div>ss
-            </div>
-        </div> -->
+       
         <div class="container my-5">
             <div class="row">
                 <div class="col-sm-10">
@@ -64,7 +46,6 @@ $data = mysqli_query($conn, $qry) or die ("not fire");
                 </div>
             </div>
         </div>
-        <?php //include ("Footer.php") ?>
 
     </body>
 

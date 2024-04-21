@@ -45,7 +45,7 @@ $complaint = mysqli_num_rows($complaint_sql);
                         // print_r($res1[0]);
                         $seats = $res1[0];
                         ?>
-                        <input type="hidden" name="uid" value="<?php echo $res[0] ?>">
+                        <input type="hidden" name="uid" value="<?php echo $_SESSION['flatno'] ?>">
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control" id="floatingInput" placeholder="Enter your name here..."
                                 name="username" value="<?php echo $_SESSION['blockno'] . '-' . $_SESSION['flatno']; ?>
