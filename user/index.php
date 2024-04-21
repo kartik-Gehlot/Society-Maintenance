@@ -9,8 +9,8 @@ include './includes/shared/header.php';
 <?php
 
 $flatid_sql = mysqli_query($con, "SELECT FlatID from flats where FlatNumber='{$_SESSION['flatno']}' and BlockNumber='{$_SESSION['blockno']}'");
-$row_flat = mysqli_fetch_assoc($flatid_sql);
-$flatid = $row_flat['FlatID'];
+//$row_flat = mysqli_fetch_assoc($flatid_sql);
+$flatid = mysqli_fetch_assoc($flatid_sql);//$row_flat['FlatID'];
 // echo $row_flat['FlatID'];
 
 // $meetings_s = mysqli_query($con, "SELECT * from meetings");
