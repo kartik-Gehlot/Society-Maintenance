@@ -33,6 +33,7 @@
                <div class="form-btn">
                 <hr id="indicator">
                    <span onclick="login()">Login</span>
+                   <span onclick="register()">Register</span>
                    
                 </div>
                 <form action="userlogin.php" method="POST" id="Loginform">
@@ -50,7 +51,16 @@
                     <!-- <a href="">Forget Password...???</a> -->
                     
                 </form>
-               
+            </form>
+            <form action="register.php" method="POST" id="Regform">
+                <input type="text" placeholder="Username" name="username" required>
+                <input type="email" placeholder="E-mail" name="email" required>
+                <input type="text" placeholder="Flat-No." name="flatno" required>
+                <input type="tel" placeholder="Mobile Number" name="mobno" required>
+                <input type="text" placeholder="Number of Family members" name="fammem" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <button type="submit" class="btn-losi" >Register Now</button>
+            </form>
 
            </div>
              
@@ -120,13 +130,19 @@
     </footer>
    <script>
        var Loginform=document.getElementById("Loginform")
-     //  var Regform=document.getElementById("Regform")
+       var Regform=document.getElementById("Regform")
        var indicator=document.getElementById("indicator")
 
-        
+       function register(){
+            Regform.style.transform= "translateX(0px)";
+            Loginform.style.transform= "translateX(0px)";
+            indicator.style.transform= "translateX(80px)";
+
+         }
+         
          function login(){
-          //  Regform.style.transform= "translateX(300px)";
-          //  Loginform.style.transform= "translateX(300px)";
+           Regform.style.transform= "translateX(300px)";
+           Loginform.style.transform= "translateX(300px)";
             indicator.style.transform= "translateX(0px)";
 
          }
