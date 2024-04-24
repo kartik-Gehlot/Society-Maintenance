@@ -2,59 +2,59 @@
 
 include '../../../config.php';
 
-function generateOTP($visitorOTP, $vcno, $vname, $startdate, $duration)
-{
+// function generateOTP($visitorOTP, $vcno, $vname, $startdate, $duration)
+// {
 
-    $enddate = date('Y-m-d', strtotime($startdate . " + " . $duration . " day"));
-    // echo $enddate;
+//     $enddate = date('Y-m-d', strtotime($startdate . " + " . $duration . " day"));
+//     // echo $enddate;
 
-    $fields = array(
-        "sender_id" => "CHKSMS",
-        // "message" => $vname." your Visiting OTP is <strong>". $visitorOTP ." </strong>valid from <strong> ". $startdate . " to ". $enddate ."</strong>",
-        "message" => "2",
-        "variables_values" => $visitorOTP,
-        "route" => "s", //check
-        // "numbers" => '"' . $number1 . ', ' . $number2 . '"', //not working
-        "numbers" => $vcno,
-    );
-    // print_r($fields);
+//     $fields = array(
+//         "sender_id" => "CHKSMS",
+//         // "message" => $vname." your Visiting OTP is <strong>". $visitorOTP ." </strong>valid from <strong> ". $startdate . " to ". $enddate ."</strong>",
+//         "message" => "2",
+//         "variables_values" => $visitorOTP,
+//         "route" => "s", //check
+//         // "numbers" => '"' . $number1 . ', ' . $number2 . '"', //not working
+//         "numbers" => $vcno,
+//     );
+//     // print_r($fields);
 
-    // echo '<script>console.log('.$fields.')</script>';
-    $curl = curl_init();
+//     // echo '<script>console.log('.$fields.')</script>';
+//     $curl = curl_init();
 
-    curl_setopt_array($curl, array(
-        CURLOPT_URL => "https://www.fast2sms.com/dev/bulkV2",
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => "",
-        CURLOPT_MAXREDIRS => 10, //c
-        CURLOPT_TIMEOUT => $duration * 24 * 3600, //c
-        CURLOPT_SSL_VERIFYHOST => 0,
-        CURLOPT_SSL_VERIFYPEER => 0,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => "POST",
-        CURLOPT_POSTFIELDS => json_encode($fields),
-        CURLOPT_HTTPHEADER => array(
-            "authorization: 4XTW3u2vgelpOVUiDj0K1RSd9fc8GHNyYsFqL5aJoM7PAwQBIbuFjJ8IVgKcLQhrvdOfmzYB1WplUMo2",
-            "accept: */*",
-            "cache-control: no-cache",
-            "content-type: application/json",
-        ),
-    ));
+//     curl_setopt_array($curl, array(
+//         CURLOPT_URL => "https://www.fast2sms.com/dev/bulkV2",
+//         CURLOPT_RETURNTRANSFER => true,
+//         CURLOPT_ENCODING => "",
+//         CURLOPT_MAXREDIRS => 10, //c
+//         CURLOPT_TIMEOUT => $duration * 24 * 3600, //c
+//         CURLOPT_SSL_VERIFYHOST => 0,
+//         CURLOPT_SSL_VERIFYPEER => 0,
+//         CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+//         CURLOPT_CUSTOMREQUEST => "POST",
+//         CURLOPT_POSTFIELDS => json_encode($fields),
+//         CURLOPT_HTTPHEADER => array(
+//             "authorization: 4XTW3u2vgelpOVUiDj0K1RSd9fc8GHNyYsFqL5aJoM7PAwQBIbuFjJ8IVgKcLQhrvdOfmzYB1WplUMo2",
+//             "accept: */*",
+//             "cache-control: no-cache",
+//             "content-type: application/json",
+//         ),
+//     ));
 
-    $response = curl_exec($curl);
-    $err = curl_error($curl);
+//     $response = curl_exec($curl);
+//     $err = curl_error($curl);
 
-    curl_close($curl);
+//     curl_close($curl);
 
-    if ($err) {
-        echo "cURL Error #:" . $err;
+//     if ($err) {
+//         echo "cURL Error #:" . $err;
 
-    } else {
-        //echo $response;
-        // echo "<script>console.log('Done succ')</script>";
-        // return $visitorOTP;
-    }
-}
+//     } else {
+//         //echo $response;
+//         // echo "<script>console.log('Done succ')</script>";
+//         // return $visitorOTP;
+//     }
+// }
 
 if (isset($_POST['addvisitors-btn'])) {
 
@@ -72,7 +72,7 @@ if (isset($_POST['addvisitors-btn'])) {
     $duration = mysqli_escape_string($con, $_POST['duration']);
 
     $timestamp = date("Y-m-d H:i:s");
-    $added_by = $_SESSION['username'];
+    $added_by = $_SESSION['Admin1'];
     // $added_by = 'admin1';
 
     //Fetching the FlatID from Flats table
@@ -90,15 +90,15 @@ if (isset($_POST['addvisitors-btn'])) {
 
     } else {
         // store in the database; check if error doesnt occur while storing
-        $otp = rand(100000, 999999);
-        $query = "INSERT INTO visitors(`VisitorID`,`FlatID`, `VisitorName`,`VisitorContactNo`,`AlternateVisitorContactNo`,`BlockNumber`, `FlatNumber`, `NoOfPeople`,`WhomToMeet`, `ReasonToMeet`, `OTP`,`StartDate`,`Duration`,`updated_by`, `updated_at`)
-                  VALUES ('' ," . $flatID['FlatID'] . ",'$vname' , '$contactno' , ' $altcontactno' , '$block' , '$flatno' , '$people', '$whomtomeet' , '$reasontomeet', '$otp', '$startdate', '$duration', '$added_by' , '$timestamp' )";
+        // $otp = rand(100000, 999999);
+        $query = "INSERT INTO visitors(`VisitorID`,`FlatID`, `VisitorName`,`VisitorContactNo`,`AlternateVisitorContactNo`,`BlockNumber`, `FlatNumber`, `NoOfPeople`,`WhomToMeet`, `ReasonToMeet`,`StartDate`,`Duration`,`updated_by`, `updated_at`)
+                  VALUES ('' ," . $flatID['FlatID'] . ",'$vname' , '$contactno' , ' $altcontactno' , '$block' , '$flatno' , '$people', '$whomtomeet' , '$reasontomeet',  '$startdate', '$duration', '$added_by' , '$timestamp' )";
 
         echo "\n" . $query;
         echo "\n";
         if (mysqli_query($con, $query)) {
             echo "Visitor Added successfully\n";
-            generateOTP($otp, $contactno, $vname, $startdate, $duration);
+            // generateOTP($otp, $contactno, $vname, $startdate, $duration);
             //Start the session if already not started.
             $_SESSION['success_message'] = "<strong>Success!</strong> Visitor added successfully!";
 
@@ -108,7 +108,7 @@ if (isset($_POST['addvisitors-btn'])) {
             exit();
 
         } else {
-            $query = "UPDATE visitors SET OTP = 0
+            $query = "UPDATE visitors 
                       WHERE BlockNumber='$block', FlatNumber='$flatno',VisitorName = '$vname'";
 
             $result = mysqli_query($con, $query);
@@ -177,10 +177,10 @@ if (isset($_POST['update_visitors'])) {
             //check whether the start date or duration is changing
             if (($startdate_new != $startdate_old) || ($duration_new != $duration_old)) {
 
-                $otp_new = rand(100000, 999999);
-                $query = "UPDATE visitors SET OTP = '$otp_new' WHERE VisitorID='$visitorID'";
+                // $otp_new = rand(100000, 999999);
+                $query = "UPDATE visitors  WHERE VisitorID='$visitorID'";
                 mysqli_query($con, $query);
-                generateOTP($otp_new, $vcontact_new, $vname_new, $startdate_new, $duration_new);
+                // generateOTP($otp_new, $vcontact_new, $vname_new, $startdate_new, $duration_new);
             }
 
             $sql = "UPDATE visitors
@@ -199,10 +199,10 @@ if (isset($_POST['update_visitors'])) {
         //check whether the start date or duration is changing
         if (($startdate_new != $startdate_old) || ($duration_new != $duration_old)) {
 
-            $otp_new = rand(100000, 999999);
-            $query = "UPDATE visitors SET OTP = '$otp_new' WHERE VisitorID='$visitorID'";
+            // $otp_new = rand(100000, 999999);
+            $query = "UPDATE visitors  WHERE VisitorID='$visitorID'";
             mysqli_query($con, $query);
-            generateOTP($otp_new, $vcontact_new, $vname_new, $startdate_new, $duration_new);
+            // generateOTP($otp_new, $vcontact_new, $vname_new, $startdate_new, $duration_new);
         }
 
         $sql = "UPDATE visitors
