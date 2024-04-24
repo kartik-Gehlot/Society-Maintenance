@@ -90,7 +90,7 @@ if (isset($_GET['return'])) {
     $data = mysqli_query($conn, $qry) or die("not fire");
     $row = mysqli_fetch_array($data);
 
-    $qry1 = "update inventory set Quantity=Quantity+$row[4] where Title='$row[3]'";
+    $qry1 = "update inventory set Quantity=Quantity+$row[5] where Title='$row[4]'";
     mysqli_query($conn, $qry1) or die("not fire");
 
     $qry2 = "delete from borrow where id=$id";
