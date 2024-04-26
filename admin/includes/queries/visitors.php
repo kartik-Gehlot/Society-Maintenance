@@ -72,7 +72,7 @@ if (isset($_POST['addvisitors-btn'])) {
     $duration = mysqli_escape_string($con, $_POST['duration']);
 
     $timestamp = date("Y-m-d H:i:s");
-    $added_by = $_SESSION['Admin1'];
+    $added_by = $_SESSION['username'];
     // $added_by = 'admin1';
 
     //Fetching the FlatID from Flats table
@@ -92,10 +92,10 @@ if (isset($_POST['addvisitors-btn'])) {
         // store in the database; check if error doesnt occur while storing
         // $otp = rand(100000, 999999);
         $query = "INSERT INTO visitors(`VisitorID`,`FlatID`, `VisitorName`,`VisitorContactNo`,`AlternateVisitorContactNo`,`BlockNumber`, `FlatNumber`, `NoOfPeople`,`WhomToMeet`, `ReasonToMeet`,`StartDate`,`Duration`,`updated_by`, `updated_at`)
-                  VALUES ('' ," . $flatID['FlatID'] . ",'$vname' , '$contactno' , ' $altcontactno' , '$block' , '$flatno' , '$people', '$whomtomeet' , '$reasontomeet',  '$startdate', '$duration', '$added_by' , '$timestamp' )";
+                  VALUES ('' ,'" . $flatID['FlatID'] . "','$vname' , '$contactno' , '$altcontactno' , '$block' , '$flatno' , '$people', '$whomtomeet' , '$reasontomeet',  '$startdate', '$duration', '$added_by' , '$timestamp' )";
 
-        echo "\n" . $query;
-        echo "\n";
+       echo "\n" . $query;
+       echo "\n";
         if (mysqli_query($con, $query)) {
             echo "Visitor Added successfully\n";
             // generateOTP($otp, $contactno, $vname, $startdate, $duration);

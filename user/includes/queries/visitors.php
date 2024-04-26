@@ -97,7 +97,7 @@ if (isset($_POST['addvisitors-btn'])) {
         $otp = rand(100000, 999999);
         // $otp = generateOTP($contactno, $altcontactno,$vname,$startdate, $duration);//
         $query = "INSERT INTO visitors(`VisitorID`,`FlatID`, `VisitorName`,`VisitorContactNo`,`AlternateVisitorContactNo`,`BlockNumber`, `FlatNumber`, `NoOfPeople`,`WhomToMeet`, `ReasonToMeet`, `OTP`,`StartDate`,`Duration`,`updated_by`, `updated_at`)
-                  VALUES ('' ," . $flatID['FlatID'] . ",'$vname' , '$contactno' , ' $altcontactno' , '$block' , '$flatno' , '$people', '$whomtomeet' , '$reasontomeet', '$otp', '$startdate', '$duration', '$added_by' , '$timestamp' )";
+                  VALUES ('' ,'" . $flatID['FlatID'] . "','$vname' , '$contactno' , ' $altcontactno' , '$block' , '$flatno' , '$people', '$whomtomeet' , '$reasontomeet', '$otp', '$startdate', '$duration', '$added_by' , '$timestamp' )";
 
         echo "\n" . $query;
         echo "\n";
