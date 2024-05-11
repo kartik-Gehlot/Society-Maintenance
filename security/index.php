@@ -27,7 +27,7 @@
                                 <th>Alternate Contact No</th>
                                 <th>Number of People</th>
                                 <th>Date</th>
-                                <th>OTP</th>
+                                <th>2FA</th>
                                 <!-- <th>Verify</th> -->
                             </tr>
                         </thead>
@@ -40,7 +40,7 @@
                                 <th>Alternate Contact No</th>
                                 <th>Number of People</th>
                                 <th>Date</th>
-                                <th>OTP</th>
+                                <th>2FA</th>
                                 <!-- <th>Verify</th> -->
                             </tr>
                         </tfoot>

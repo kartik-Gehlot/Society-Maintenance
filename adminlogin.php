@@ -151,7 +151,7 @@
 // // echo $username;
 // //     echo $password;
 
-//     $db = mysqli_connect('localhost', 'root', '', 'sms') or
+//     $db = mysqli_connect('localhost', 'root', '', 'mysms') or
 //     die('Error connecting to MySQL server.');
 
 //     $query = "SELECT * FROM admin WHERE username= '{$username}'  and password = '{$password}' ";

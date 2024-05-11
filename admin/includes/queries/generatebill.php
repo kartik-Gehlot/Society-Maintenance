@@ -14,7 +14,7 @@ if (isset($_POST['genbill-btn'])) {
     //adding bills queue for all flats to the queue table
 
     //bill dir"
-    $bill_dir = "C:/xampp/htdocs/society-management-system/BillUploads/";
+    $bill_dir = "D:/xampp/htdocs/bca/society-management-system/BillUploads/";
     //calc bill month(prev month)
     $tgl = date("d F Y ");
     $bmonth = date("M Y", mktime(0, 0, 0, date("m", strtotime($tgl)) - 1, 1, date("Y", strtotime($tgl))));

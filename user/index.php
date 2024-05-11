@@ -20,11 +20,11 @@ $meetings = 1;
 $complaint_sql = mysqli_query($con, "SELECT * from complaints where FlatNumber='{$_SESSION['flatno']}' and BlockNumber='{$_SESSION['blockno']}'");
 $complaint = mysqli_num_rows($complaint_sql);
 
-$visit_sql = mysqli_query($con, "SELECT * from visitors where FlatID='$flatid' and BlockNumber='{$_SESSION['blockno']}'");
-$visit = mysqli_num_rows($visit_sql);
+//$visit_sql = mysqli_query($con, "SELECT * from visitors where FlatID='$flatid' and BlockNumber='{$_SESSION['blockno']}'");
+//$visit = mysqli_num_rows($visit_sql);
 
-$bill_sql = mysqli_query($con, "SELECT * from bill_queue where FlatID='$flatid';");
-$bill = mysqli_num_rows($bill_sql);
+//$bill_sql = mysqli_query($con, "SELECT * from bill_queue where FlatID='$flatid';");
+//$bill = mysqli_num_rows($bill_sql);
 
 $security_sql = mysqli_query($con, "SELECT * from security");
 $security = mysqli_num_rows($security_sql);

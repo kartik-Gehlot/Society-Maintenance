@@ -46,7 +46,7 @@ $data = mysqli_query($conn, $qry) or die ("not fire");
                                         <td>
                                             <?php echo $item['Name'] ?>
                                         </td>
-                                        <td><img src="<?php echo $item['Image'] ?>" alt="" width="50px"></td>
+                                        <td><img src="../Images/<?php echo $item['Image'] ?>" alt="" width="50px"></td>
                                         <!-- <td><button class="btn btn-warning">Update</button></td> -->
                                         <td><a href="action.php?DelId3=<?= $item['id'] ?>"><button
                                                     class="btn btn-danger">Delete</button></a></td>

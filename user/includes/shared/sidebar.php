@@ -81,7 +81,6 @@
            
                 <a class="collapse-item" href="UserBorrow.php">Borrowed Items</a>
             
-                <a class="collapse-item" href="Balance.php">Balance</a>
             </div>
         </div>
     </li>
